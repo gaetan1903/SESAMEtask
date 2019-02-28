@@ -532,43 +532,42 @@ class Interface():
 		
 
 	def get_start(self):
-		
-			#  try:
-			excel = Write_constante()
-			excel.initial()
-			excel.format()
-			excel.nextChanger = 0
-			excel.principal_text()
-			excel.writeTache()
-			excel.writeVague()
-			excel.writeDate()
-			excel.writeMMM()
-			excel.writeGrandMenage()
-			excel.sesame_logo()
-			excel.select_date()
-			excel.select_week()
-			excel.write_GMvariable()
-			excel.write_variable()
-			excel.write_varMidi()
-			excel.__fin__()
-			"""
-		except:
 
-			if self.nombreErreur < 2:
-				tkmsg.showerror("Erreur n° {}".format(self.nombreErreur), "Quelque chose a mal fonctionner")
-				self.nombreErreur += 1
+		excel = Write_constante()
+		excel.initial()
+		excel.format()
+		excel.nextChanger = 0
+		excel.principal_text()
+		excel.writeTache()
+		excel.writeVague()
+		excel.writeDate()
+		excel.writeMMM()
+		excel.writeGrandMenage()
+		excel.sesame_logo()
+		excel.select_date()
+		excel.select_week()
+		excel.write_GMvariable()
+		excel.write_variable()
+		excel.write_varMidi()
+		excel.__fin__()
 
-			elif self.nombreErreur == 2:
-				tkmsg.showerror("Erreur n° {}".format(self.nombreErreur), "Verifier s'il y pas de fichier Tache excel ouvert, si oui Fermer")
-				self.nombreErreur += 1
 
-			elif self.nombreErreur > 2 and self.nombreErreur < 5:
-				tkmsg.showerror("Erreur n° {}".format(self.nombreErreur), "Verifier si un dossier 'Output' est présent dans le dossier contenant l'excecutable, sinon créé")
-				self.nombreErreur += 1
-			else:
-				tkmsg.showerror("Erreur", 'Veuiller Contacter le Developper pour resoudre le probleme')
+
+		if self.nombreErreur < 2:
+			tkmsg.showerror("Erreur n° {}".format(self.nombreErreur), "Quelque chose a mal fonctionner")
+			self.nombreErreur += 1
+
+		elif self.nombreErreur == 2:
+			tkmsg.showerror("Erreur n° {}".format(self.nombreErreur), "Verifier s'il y pas de fichier Tache excel ouvert, si oui Fermer")
+			self.nombreErreur += 1
+
+		elif self.nombreErreur > 2 and self.nombreErreur < 5:
+			tkmsg.showerror("Erreur n° {}".format(self.nombreErreur), "Verifier si un dossier 'Output' est présent dans le dossier contenant l'excecutable, sinon créé")
+			self.nombreErreur += 1
+		else:
+			tkmsg.showerror("Erreur", 'Veuiller Contacter le Developper pour resoudre le probleme')
 			
-			"""
+			
 	def get_next(self):
 		
 		try:
@@ -1112,7 +1111,6 @@ if __name__ == "__main__":
 	fen.labeltext()
 	fen.button()
 	fen.label_bord()
-	print(50)
 	if count >= 40:
 		fen.reset_all()
 
