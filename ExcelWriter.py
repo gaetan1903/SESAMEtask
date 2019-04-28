@@ -7,15 +7,10 @@ Author: 	Gaetan Jonathan
 """
 # -*-coding:Utf-8 -*-
 
-import time
-import datetime
-import xlsxwriter
+import time, datetime, xlsxwriter, webbrowser, os
 from tkinter import *
 from tkinter.font import *
 import tkinter.messagebox as tkmsg 
-import webbrowser
-import os
- 
 
 Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
