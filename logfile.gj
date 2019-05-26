@@ -1,5 +1,3 @@
 cit.write_cit()
 ind.t_changer()
 gm.gm_changer()
-gm.grandM1 = 'test'
-ind.t_changer

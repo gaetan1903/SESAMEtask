@@ -105,15 +105,15 @@ class Write_constante():
 	def initial(self):
 
 		try:
-			self.Fichier_Excel = xlsxwriter.Workbook(r"Output\\Tache"+"-"+str(self.dateName)+".xlsx")
+			self.Fichier_Excel = xlsxwriter.Workbook(r"Output/Tache"+"-"+str(self.dateName)+".xlsx")
 			
 		except FileNotFoundError:
 			os.system("mkdir Output")
 			tkmsg.showinfo("Dossier", "Un Dossier Output a été créé... ")
-			self.Fichier_Excel = xlsxwriter.Workbook(r"Output\\Tache"+"-"+str(self.dateName)+".xlsx")
+			self.Fichier_Excel = xlsxwriter.Workbook(r"Output/Tache"+"-"+str(self.dateName)+".xlsx")
 
 		except PermissionError:
-			self.Fichier_Excel = xlsxwriter.Workbook(r"Output\\Tache"+"-"+str(self.dateName)+"_1.xlsx")
+			self.Fichier_Excel = xlsxwriter.Workbook(r"Output/Tache"+"-"+str(self.dateName)+"_1.xlsx")
 
 		self.Feuille_Excel = self.Fichier_Excel.add_worksheet(self.dateName + '_' + self.dateFin)
 
@@ -135,16 +135,16 @@ class Write_constante():
 		self.dateName = str(datetime.date.strftime(datetime.date.fromordinal(self.jour + (7*self.nextChanger)), "%Y-%m-%d"))
 
 		try:
-			self.Fichier_Excel = xlsxwriter.Workbook(r"Output\\Tache"+"-"+str(self.dateName)+".xlsx")
+			self.Fichier_Excel = xlsxwriter.Workbook(r"Output/Tache"+"-"+str(self.dateName)+".xlsx")
 			
 		except FileNotFoundError:
 			os.system("mkdir Output")
 			tkmsg.showinfo("Dossier", "Un Dossier Output a été créé... ")
-			self.Fichier_Excel = xlsxwriter.Workbook(r"Output\\Tache"+"-"+str(self.dateName)+".xlsx")
+			self.Fichier_Excel = xlsxwriter.Workbook(r"Output/Tache"+"-"+str(self.dateName)+".xlsx")
 
 		except PermissionError:
 
-			self.Fichier_Excel = xlsxwriter.Workbook(r"Output\\Tache"+"-"+str(self.dateName)+"_1.xlsx")
+			self.Fichier_Excel = xlsxwriter.Workbook(r"Output/Tache"+"-"+str(self.dateName)+"_1.xlsx")
 
 		self.Feuille_Excel = self.Fichier_Excel.add_worksheet(self.dateName + '_' + self.dateFin)
 
@@ -376,7 +376,7 @@ class Write_constante():
 
 	def sesame_logo(self):
 		try:
-			self.Feuille_Excel.insert_image("L25", "Images\\Sesame.png")
+			self.Feuille_Excel.insert_image("L25", "Images/Sesame.png")
 		except:
 			pass
 	
@@ -515,7 +515,7 @@ class Interface():
 	def __init__(self):
 		self.root = Tk()
 		self.root.title("SESAME TASK AtriuM")
-		self.root.iconbitmap(r'Images\\favicon.ico')
+		#self.root.iconbitmap(r'Images\\favicon.ico')
 		self.root.geometry("1300x625+20+20")
 		filelog = open(".theme.gj", "r")
 		self.count_changeTheme = 0
@@ -951,11 +951,11 @@ class Interface():
 
 		self.textNone = Label(self.root, text = " ", width = 200, height = 4, bg = "grey").place(x ='0', y = '0')
 
-		self.sesame_icone = PhotoImage(file='Images\\favicon.png')
+		self.sesame_icone = PhotoImage(file='Images/favicon.png')
 		self.sesame_icon_label = Label(self.root, image = self.sesame_icone)
 		self.sesame_icon_label.place(x = '0', y = '4')
 
-		self.gj_image = PhotoImage(file='Images\\gj.png')
+		self.gj_image = PhotoImage(file='Images/gj.png')
 		self.gj_label = Label(self.root, image = self.gj_image)
 		self.gj_label.place(x = '1320', y = '5')
 
@@ -963,13 +963,13 @@ class Interface():
 		self.date_actuel = Label(self.root, text = time.strftime("%d {} %Y".format(mon.month(datetime.date.toordinal(datetime.date.today())))), fg = "orange",  bg = "grey", height = 2, width = '15', font = self.font_date_actuel)
 		self.date_actuel.place(x = "550", y = "2") 
 
-		self.photo = PhotoImage(file = "Images\\Sesame.png")
+		self.photo = PhotoImage(file = "Images/Sesame.png")
 		self.images_logo = Label(self.root, image = self.photo).place(x = "0", y= "510")
 
-		self.photo_decor = PhotoImage(file = "Images\\priv.png")
+		self.photo_decor = PhotoImage(file = "Images/priv.png")
 		self.images_decor = Label(self.root, image = self.photo_decor).place(x="385", y='70')
 
-		self.taches_photo = PhotoImage(file = "Images\\logo1.png")
+		self.taches_photo = PhotoImage(file = "Images/logo1.png")
 		self.taches_image = Label(self.root, image = self.taches_photo).place(x = "0", y ="65")
 
 
